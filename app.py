@@ -4,7 +4,8 @@ from PIL import Image
 st.title('好きな映画')
 
 st.write('Display Image')
-img = Image.open('/Users/onoderakyoko/project-dir/topgun.jpg')
+#img = Image.open('/Users/onoderakyoko/project-dir/topgun.jpg')
+img = Image.open('topgun.jpg')
 st.image(img, caption='マーベリック！', use_column_width=False, width=300)
 
 import os
