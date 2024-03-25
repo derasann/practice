@@ -12,6 +12,9 @@ try:
 except FileNotFoundError:
     st.error(f'Error: File not found at {img_path}')
 
+import os
+st.write("Current directory:", os.getcwd())
+
 option = st.slider(
     'この映画をどのくらい好きですか、',
     min_value=1, max_value=10, value=5
