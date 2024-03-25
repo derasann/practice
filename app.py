@@ -1,3 +1,5 @@
+python
+Copy code
 import streamlit as st
 from PIL import Image
 import os
@@ -6,13 +8,11 @@ import os
 current_dir = os.getcwd()
 st.write('Current directory:', current_dir)
 
-# カレントディレクトリを変更
-os.chdir('/Users/onoderakyoko/project-dir')
-
 st.title('好きな映画')
 
 st.write('Display Image')
-img = Image.open('topgun.jpg')  # パスを修正
+img_path = 'topgun.jpg'  # ファイルの相対パスを指定
+img = Image.open(img_path)
 st.image(img, caption='マーベリック！', use_column_width=False, width=300)
 
 option = st.slider(
