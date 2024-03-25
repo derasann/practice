@@ -4,13 +4,13 @@ from PIL import Image
 st.title('好きな映画')
 
 st.write('Display Image')
-#img = Image.open('/Users/onoderakyoko/project-dir/topgun.jpg')
-img = Image.open('topgun.jpg')
-st.image(img, caption='マーベリック！', use_column_width=False, width=300)
+img_path = '/Users/onoderakyoko/project-dir/topgun.jpg'  # 画像のパスを直接指定
 
-import os
-os.chdir('/Users/onoderakyoko/project-dir')
-img = Image.open('topgun.jpg')
+try:
+    img = Image.open(img_path)
+    st.image(img, caption='マーベリック！', use_column_width=False, width=300)
+except FileNotFoundError:
+    st.error(f'Error: File not found at {img_path}')
 
 option = st.slider(
     'この映画をどのくらい好きですか、',
