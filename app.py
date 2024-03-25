@@ -4,8 +4,12 @@ from PIL import Image
 st.title('好きな映画')
 
 st.write('Display Image')
-img = Image.open('topgun')
+img = Image.open('/Users/onoderakyoko/project-dir/topgun.jpg')
 st.image(img, caption='マーベリック！', use_column_width=False, width=300)
+
+import os
+os.chdir('/Users/onoderakyoko/project-dir')
+img = Image.open('topgun.jpg')
 
 option = st.slider(
     'この映画をどのくらい好きですか、',
