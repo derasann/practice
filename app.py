@@ -1,5 +1,3 @@
-python
-Copy code
 import streamlit as st
 from PIL import Image
 import os
@@ -11,7 +9,7 @@ st.write('Current directory:', current_dir)
 st.title('好きな映画')
 
 st.write('Display Image')
-img_path = 'topgun.jpg'  # ファイルの相対パスを指定
+img_path = '/Users/onoderakyoko/project-dir/images/topgun.jpg'  
 img = Image.open(img_path)
 st.image(img, caption='マーベリック！', use_column_width=False, width=300)
 
